@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseAppTheme">
+        <attr name="actionBarIconColor" format="color" />
+    </declare-styleable>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+        <!--ActionBar-->
+        <item name="android:colorPrimary">@color/light_blue</item>
+        <!--statusBar-->
+        <item name="android:colorPrimaryDark">@color/deep_blue</item>
+        <!--ActionBar Text Color-->
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <!--Windows BackGround Color-->
+
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:actionBarTheme">@style/MainActionBarThemeOverlay</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.Material.Light.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+    </style>
+
+    <style name="ActionBarTitle" parent="@android:style/TextAppearance.Material">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MainActionBarThemeOverlay" parent="">
+        <item name="android:colorControlNormal">?actionBarIconColor</item>
+        <item name="android:colorControlHighlight">@color/light_orange</item>
+    </style>
+
+    <style name="ProgressBar_Height" parent="@android:style/Widget.Material.Light.ProgressBar.Horizontal">
+    </style>
+
+    <style name="OverlayActionBar" parent="android:Widget.Material.Light.ActionBar">
+        <item name="android:homeAsUpIndicator">@drawable/ic_ab_up_white</item>
+        <item name="android:background">@null</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+    </style>
+
+    <style name="DetailTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/OverlayActionBar</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

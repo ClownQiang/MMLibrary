@@ -1,0 +1,34 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!--ActionBar Text Color-->
+
+        <!--Windows BackGround Color-->
+
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+        <item name="android:background">@color/light_blue</item>
+    </style>
+
+    <style name="ActionBarTitle" parent="@android:style/TextAppearance.Holo">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProgressBar_Height" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"></style>
+
+    <style name="OverlayActionBar" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:homeAsUpIndicator">@drawable/ic_ab_up_white</item>
+        <item name="android:background">@color/transprant</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+    </style>
+
+    <style name="DetailTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/OverlayActionBar</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

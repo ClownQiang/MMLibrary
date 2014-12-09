@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.clownqiang.mmlibrary.activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:elevation="5dp"
+        android:gravity="bottom"
+        android:paddingBottom="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="添加你的账号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xl_size" />
+
+    <ProgressBar
+        style="@style/ProgressBar_Height"
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="-6dp"
+        android:indeterminateTint="@color/deep_orange"
+        android:indeterminateTintMode="src_in"
+        android:progressDrawable="@color/transprant" />
+
+    <LinearLayout
+        android:id="@+id/logoLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/xl_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="@dimen/xl_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLUB"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/xl_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/claimTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoLinearLayout"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="登录即可获取你的图书馆相关信息"
+        android:textSize="@dimen/m_size" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/claimTextView"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:hint="输入你的图书馆账号"
+        android:singleLine="true"
+        app:baseColor="@color/x_deep_grey"
+        app:floatingLabel="highlight"
+        app:primaryColor="@color/deep_blue" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/passWord"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="输入你的密码"
+        android:password="true"
+        android:singleLine="true"
+        app:baseColor="@color/x_deep_grey"
+        app:floatingLabel="highlight"
+        app:primaryColor="@color/deep_blue" />
+
+    <RelativeLayout
+        android:id="@+id/nextStep"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_grey">
+
+        <Button
+            android:id="@+id/loginButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="下一步"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nextStep"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="我们不会盗用您的账号和密码，请放心登录"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+</RelativeLayout>

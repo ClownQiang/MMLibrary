@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">何书还</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Setting</string>
+    <string name="early_day">提前多久</string>
+    <string name="loginin">登录</string>
+    <string name="input_is_empty">输入不能为空~~</string>
+    <string name="progressdialog_content">加载中。。。</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="cookie_fail">登录身份信息已过期，重新登录</string>
+    <string name="fail_login">登录失败，请检查用户名或密码</string>
+    <string name="title_activity_book_detail">BookDetailActivity</string>
+    <string name="borrowed_time">借书时间</string>
+    <string name="return_time">还书时间</string>
+    <string name="renew_fail">续借失败</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="dialog_title">提前几天(默认提前3天提醒)</string>
+    <string name="exit">退出</string>
+
+</resources>
