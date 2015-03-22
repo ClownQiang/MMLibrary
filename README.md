@@ -10,6 +10,10 @@
 ###客户端
 尝试最新的Material Design，由于没有专业的UI设计，界面全靠我的YY以及参考Google官方App（“参考”，呵呵~~~），做的不好的地方，求轻喷。
 
+###在简书上面对于Material Design介绍
+[“何书还”之一（Material Design小试）](http://www.jianshu.com/p/5653850c637c)
+[“何书还”之二（关于Animation使用）](http://www.jianshu.com/p/7768c8df38c4)
+
 ###私房照
 ![登录界面](http://clownqiang.qiniudn.com/login.png)
 ![图书列表](http://clownqiang.qiniudn.com/list.png)
