@@ -111,5 +111,6 @@
         android:elevation="5dp"
         android:stateListAnimator="@anim/anim"
         android:text="续借"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        />
 </RelativeLayout>
