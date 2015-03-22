@@ -108,9 +108,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:background="@drawable/ripple"
-        android:elevation="5dp"
-        android:stateListAnimator="@anim/anim"
         android:text="续借"
         android:textColor="@color/white"
+        android:elevation="5dp"
+        android:stateListAnimator="@anim/anim"
         />
 </RelativeLayout>

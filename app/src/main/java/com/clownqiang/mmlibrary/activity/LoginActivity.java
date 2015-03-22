@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -74,10 +75,10 @@ public class LoginActivity extends Activity {
                 UserData.saveUserPassWord(passWord);
                 Intent intent = new Intent(LoginActivity.this, BookListActivity.class);
 
-                if (Build.VERSION.SDK_INT==21) {
+                if (Build.VERSION.SDK_INT == 21) {
                     startActivity(intent,
                             ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this).toBundle());
-                }else {
+                } else {
                     startActivity(intent);
                 }
 
@@ -105,6 +106,8 @@ public class LoginActivity extends Activity {
         }
 
         ButterKnife.inject(this);
+
+        progressBar.setVisibility(View.INVISIBLE);
         textView.setHeight(getTextViewHeight());
         userNameEditText.setText(UserData.getUserLoginName());
         passWordEditText.setText(UserData.getUserPassWord());

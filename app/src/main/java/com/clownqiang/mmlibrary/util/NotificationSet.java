@@ -37,7 +37,7 @@ public class NotificationSet {
         try {
             int day = CustomeUtil.getLeftDay(bookMessage.getReturn_date());
             calendar.setTimeInMillis(System.currentTimeMillis());
-            calendar.add(Calendar.SECOND, day-UserData.getEarlyDay());
+            calendar.add(Calendar.SECOND, (day-UserData.getEarlyDay())*3600*60);
             alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
             //Toast.makeText(activity, "提示" + day + "秒后开启", Toast.LENGTH_SHORT).show();
         } catch (ParseException e) {
