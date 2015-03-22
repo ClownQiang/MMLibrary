@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
         <!--ActionBar Text Color-->
 
         <!--Windows BackGround Color-->
@@ -22,7 +23,7 @@
 
     <style name="OverlayActionBar" parent="android:Widget.Holo.Light.ActionBar">
         <item name="android:homeAsUpIndicator">@drawable/ic_ab_up_white</item>
-        <item name="android:background">@color/transprant</item>
+        <item name="android:background">@color/light_blue</item>
         <item name="android:titleTextStyle">@style/ActionBarTitle</item>
     </style>
 

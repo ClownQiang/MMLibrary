@@ -65,6 +65,8 @@ public class BookListActivity extends Activity {
 
         getBookList();
 
+        progressBar.setVisibility(View.INVISIBLE);
+
         bookListAdapter = new BookListAdapter(bookMessageList, BookListActivity.this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());

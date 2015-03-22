@@ -17,7 +17,7 @@
     <color name="x_deep_grey">#424242</color>
     <color name="transprant">#00000000</color>
 
-    <color name="renew_button_normal">#64ffda</color>
+    <color name="renew_button_normal">#ff0f7062</color>
     <color name="renew_button_click">#1de9b6</color>
 
     <color name="photo_tint">#7f101010</color>

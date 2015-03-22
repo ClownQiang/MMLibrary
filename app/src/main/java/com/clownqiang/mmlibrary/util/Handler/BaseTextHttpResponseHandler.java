@@ -1,5 +1,6 @@
 package com.clownqiang.mmlibrary.util.Handler;
 
+import android.view.View;
 import android.widget.ProgressBar;
 
 import com.clownqiang.mmlibrary.model.BaseJson;
@@ -36,6 +37,7 @@ public abstract class BaseTextHttpResponseHandler extends TextHttpResponseHandle
     @Override
     public void onStart() {
         super.onStart();
+        progressBar.setVisibility(View.VISIBLE);
         if (progressBar != null)
             progressBar.setIndeterminate(true);
     }
@@ -45,6 +47,7 @@ public abstract class BaseTextHttpResponseHandler extends TextHttpResponseHandle
         super.onFinish();
         if (progressBar != null)
             progressBar.setIndeterminate(false);
+        progressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override
