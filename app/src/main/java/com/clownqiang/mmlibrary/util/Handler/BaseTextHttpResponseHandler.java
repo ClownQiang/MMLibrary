@@ -1,7 +1,9 @@
 package com.clownqiang.mmlibrary.util.Handler;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.clownqiang.mmlibrary.model.BaseJson;
 import com.clownqiang.mmlibrary.util.JsonUtil;
@@ -19,6 +21,7 @@ public abstract class BaseTextHttpResponseHandler extends TextHttpResponseHandle
 
     private static final String TAG = "BaseTextHeepResponseHandler";
     ProgressBar progressBar = null;
+    Context context;
 
     Gson gson = new Gson();
 
@@ -27,8 +30,9 @@ public abstract class BaseTextHttpResponseHandler extends TextHttpResponseHandle
         this.progressBar = progressBar;
     }
 
-    protected BaseTextHttpResponseHandler(ProgressBar progressBar) {
+    protected BaseTextHttpResponseHandler(ProgressBar progressBar,Context context) {
         this.progressBar = progressBar;
+        this.context = context;
     }
 
     protected BaseTextHttpResponseHandler() {
@@ -37,7 +41,6 @@ public abstract class BaseTextHttpResponseHandler extends TextHttpResponseHandle
     @Override
     public void onStart() {
         super.onStart();
-        progressBar.setVisibility(View.VISIBLE);
         if (progressBar != null)
             progressBar.setIndeterminate(true);
     }
@@ -47,12 +50,11 @@ public abstract class BaseTextHttpResponseHandler extends TextHttpResponseHandle
         super.onFinish();
         if (progressBar != null)
             progressBar.setIndeterminate(false);
-        progressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override
     public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-
+        Toast.makeText(context,"网络连接超时",Toast.LENGTH_SHORT).show();
     }
 
     @Override

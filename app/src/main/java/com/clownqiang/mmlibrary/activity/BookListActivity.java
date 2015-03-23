@@ -120,7 +120,14 @@ public class BookListActivity extends Activity {
     }
 
     private void getBookList() {
-        ApiUtil.get(ApiUtil.BOOK_LIST, new ApiParams().withCookie(), new BaseTextHttpResponseHandler(progressBar) {
+        ApiUtil.get(ApiUtil.BOOK_LIST, new ApiParams().withCookie(), new BaseTextHttpResponseHandler(progressBar,BookListActivity.this) {
+
+            @Override
+            public void onStart() {
+                super.onStart();
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
             @Override
             public void onSuccessDo(BaseJson baseJson, String body) {
                 if (baseJson.getCode().equals(Constant.FAIL_LOGIN)) {
@@ -148,6 +155,12 @@ public class BookListActivity extends Activity {
                     NotificationSet.setNotification(BookListActivity.this, bookMessage);
                 }
                 bookListAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }

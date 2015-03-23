@@ -80,7 +80,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookHo
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("book_message", bookMessage);
                     intent.putExtras(bundle);
-                    if (Build.VERSION.SDK_INT == 21) {
+                    if (Build.VERSION.SDK_INT >= 21) {
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(activity,
                                 Pair.create((View) holder.bookPage, "bookPage")
                         );

@@ -54,8 +54,13 @@ public class LoginActivity extends Activity {
             Toast.makeText(this, getResources().getString(R.string.input_is_empty), Toast.LENGTH_SHORT).show();
             return;
         }
-        ApiUtil.get(ApiUtil.LOGIN_IN, new ApiParams().with("user_number", userName).with("user_passwd", passWord), new BaseTextHttpResponseHandler(progressBar) {
+        ApiUtil.get(ApiUtil.LOGIN_IN, new ApiParams().with("user_number", userName).with("user_passwd", passWord), new BaseTextHttpResponseHandler(progressBar,LoginActivity.this) {
 
+            @Override
+            public void onStart() {
+                super.onStart();
+                progressBar.setVisibility(View.VISIBLE);
+            }
 
             @Override
             public void onSuccessDo(BaseJson baseJson, String body) {
@@ -83,6 +88,12 @@ public class LoginActivity extends Activity {
                 }
 
                 LoginActivity.this.finish();
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+                progressBar.setVisibility(View.INVISIBLE);
             }
 
             @Override

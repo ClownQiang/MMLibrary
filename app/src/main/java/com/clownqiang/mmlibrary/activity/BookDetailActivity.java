@@ -130,7 +130,7 @@ public class BookDetailActivity extends Activity {
 
         progressDialog = WidgetInit.initProgressDialog(progressDialog, BookDetailActivity.this, "");
 
-        if (Build.VERSION.SDK_INT == 21) {
+        if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getEnterTransition().addListener(new TransitionAdapter() {
                 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                 @Override
@@ -194,10 +194,11 @@ public class BookDetailActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if (Build.VERSION.SDK_INT == 21) {
+        if (Build.VERSION.SDK_INT >= 21) {
             ObjectAnimator color = ObjectAnimator.ofArgb(bookPage.getDrawable(), "tint",
                     0, getResources().getColor(R.color.photo_tint));
             color.addListener(new AnimatorListenerAdapter() {
+                @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     finishAfterTransition();
