@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'packer'
 
 android {
     compileSdkVersion 21
@@ -25,6 +26,13 @@ android {
     
     lintOptions {
         abortOnError false
+    }
+
+    packer{
+        // 指定是否使用build版本号自增
+        buildNumberAuto = true
+        // 指定渠道打包输出文件名格式
+        archiveNameFormat = '${appName}_${flavorName}_${buildType}_${versionName}_${versionCode}_${buildTime}'
     }
 }
 
