@@ -33,3 +33,6 @@ proguard/
 *.log
 .idea/
 *.iml
+
+markets.txt
+mmlibrary.jks

@@ -32,6 +32,10 @@
             android:name="com.clownqiang.mmlibrary.AlarmReceiver"
             android:enabled="true"
             android:exported="true"/>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="PluginSample" />
     </application>
 
 </manifest>
